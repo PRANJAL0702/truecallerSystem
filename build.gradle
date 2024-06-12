@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+}
+
+group 'com.lld.truecaller'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 11
+targetCompatibility = 11
+
+repositories {
+    mavenCentral()
+}
+repositories {
+    mavenCentral()
+}
+
+test{
+    useJUnitPlatform()
+}
+
+dependencies {
+    implementation("com.baqend:bloom-filter:2.2.4")
+    compileOnly("org.projectlombok:lombok:1.18.12")
+    implementation("org.apache.commons:commons-lang3:3.10")
+    annotationProcessor("org.projectlombok:lombok:1.18.12")
+    implementation("com.google.guava:guava:29.0-jre")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.3.1")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.3.1")
+    // https://mvnrepository.com/artifact/org.mockito/mockito-junit-jupiter
+    testImplementation("org.mockito:mockito-junit-jupiter:3.3.3")
+}
